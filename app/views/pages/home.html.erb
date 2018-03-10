@@ -1,0 +1,29 @@
+<h2> Cats </h2>
+<% @cats.each do |cat| %>
+	<b>Name: </b> <% cat.name %>
+	<br />
+
+<% end %>
+
+<h2> Users </h2>
+
+<% @users.each do |user| %>
+	<b>User Name: </b> <%=user.username %>
+	<br />
+	<b> Email : </b><%= user.email %>
+	<br />
+	<b> Age </b><%= user.age %>
+	<br />
+<% end %>
+	
+
+<h2> Todos </h2>
+<% @todos.each do |todo| %>
+	<b> Tasks : </b><%= todo.tasks %>
+	<b> Finished ? : </b> <%= todo.finished %>
+	<br />
+<% end %>
+</div>
+
+
+<%= link_to 'Create A New Todo', todos_new_path %>
